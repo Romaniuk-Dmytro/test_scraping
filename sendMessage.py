@@ -31,7 +31,7 @@ async def main():
         conn.execute(f"UPDATE CAR_INFO set MESSAGE = ? where VIN = ?",
                      ('sent', car[0],))
         conn.commit()
-    await client.send_message('avtoria_cars', 'checkin')
+
     conn.close()
 
 write_to_db()
